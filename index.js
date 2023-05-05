@@ -57,6 +57,9 @@ const tempProduct = fs.readFileSync(
   "utf-8"
 );
 
+const slugs = dataObj.map((el) => slugify(el.productName, { lower: true }));
+console.log(slugs);
+
 // called each time a request is sent
 const server = http.createServer((req, res) => {
   const { query, pathname } = url.parse(req.url, true);
