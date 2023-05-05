@@ -5,6 +5,10 @@ const http = require("http");
 const path = require("path");
 // URL
 const url = require("url");
+
+const slugify = require("slugify");
+
+//                          MODULES
 // Replace Template
 const replaceTemplate = require("./modules/replaceTemplate");
 
